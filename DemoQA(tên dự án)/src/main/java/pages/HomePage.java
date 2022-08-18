@@ -18,4 +18,10 @@ public class HomePage extends Page {
 	 public void scroll () {
 		 ((JavascriptExecutor) driver).executeScript("window.scrollTo(0, document.body.scrollHeight)");
 	 }
+	 
+	 public FormsPage clickonFroms () {
+			driver.findElement(By.xpath("//*[@class='category-cards']/div[2]")).click();
+
+			return new FormsPage (driver);
 	}
+}
